@@ -1,0 +1,265 @@
+body {
+  margin: 0;
+  flex-direction: row;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0c4061c9;
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Barra lateral fija */
+.barra-lateral {
+  width: 260px;
+  background-color: #0c4061c9;
+  color: white;
+  padding: 20px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Contenedor principal */
+.contenido-principal {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background-color: #ffffff;
+  min-height: 100vh;
+}
+
+/* Header y contenido */
+.barra-superior {
+  background-color: #0c4061c9;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.contenido {
+  flex-grow: 1;
+  padding: 40px 20px;
+}
+
+.barra-lateral img {
+  width: 120px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+.nombre {
+  font-size: 24px;
+  text-align: center;
+  margin: 0;
+  transition: font-size 0.3s ease;
+}
+
+.barra-lateral h1 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.barra-lateral nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.barra-lateral nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.barra-lateral nav a:hover {
+  color: #a8d0e6;
+}
+
+/* Contenido principal */
+.contenido {
+  flex-grow: 1;
+  background-color: #ffffff;
+  padding: 40px 20px;
+}
+
+.barra-superior {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #0c4061c9;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.nav-superior {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.nav-superior a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 8px 16px;
+  transition: color 0.2s;
+}
+
+.nav-superior a:hover {
+  color: #a8d0e6;
+}
+
+h1 {
+  font-size: 28px;
+  margin: 0;
+}
+
+h2 {
+  color: #0c4061c9;
+  border-bottom: 2px solid #d0dee3;
+  padding-bottom: 5px;
+  margin-top: 30px;
+}
+
+span {
+  font-weight: bold;
+  color: #0c4061c9;
+}
+
+section {
+  text-align: justify;
+  margin-bottom: 30px;
+}
+
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.tabla th, .tabla td {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.tabla th {
+  background-color: #eef3f6;
+}
+
+/* Formulario */
+form label {
+  display: block;
+  margin: 12px 0 6px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="file"],
+form textarea {
+  width: 80%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  font-size: 16px;
+}
+
+form textarea {
+  resize: vertical;
+}
+
+.btn {
+  background-color: #0c4061c9;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background 0.2s;
+  margin-top: 20px;
+}
+
+.btn:hover {
+  background-color: #23537a;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  display: block;
+  margin-top: 4px;
+}
+
+/* Footer */
+/* Footer fijo al fondo */
+.footer {
+  text-align: center;
+  background-color: #1e3d59;
+  color: white;
+  padding: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  border-top: 2px solid #0c4061c9;
+}
+
+.titulo-principal {
+  width: 100%;
+  background-color: #ffffff;
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 2px solid #d0dee3;
+}
+
+.titulo-principal h1 {
+  margin: 0;
+  font-size: 32px;
+  color: #0c4061c9; /* Azul coherente con tu diseño */
+  font-weight: bold;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  .barra-lateral {
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .barra-lateral img {
+  width: 120px;
+  border-radius: 80%;
+  margin-bottom: 8px;
+  }
+
+  .contenido {
+    padding: 20px;
+  }
+
+  .nav-superior {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  .barra-superior {
+    padding: 10px 0;
+  }
+}

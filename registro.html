@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro - CV Diana</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/main.js"></script>
+</head>
+
+<body>
+    <!-- Barra lateral -->
+    <aside class="barra-lateral">
+        <img src="assets/img/dg.jpeg" alt="Foto de Diana">
+        <h1>Diana Lorena Gil Vargas</h1>
+        <nav>
+            <a href="index.html#perfil">Perfil</a>
+            <a href="index.html#contacto">Contacto</a>
+            <a href="index.html#formacion">Formación</a>
+            <a href="index.html#habilidades">Habilidades</a>
+            <a href="index.html#intereses">Intereses</a>
+        </nav>
+    </aside>
+
+    <div class="contenido-principal">
+        <div class="titulo-principal">
+            <h1>Regístrate</h1>
+        </div>
+
+        <!-- Barra superior con navegación -->
+        <header class="barra-superior">
+            <nav class="nav-superior">
+                <a href="index.html">Inicio CV</a>
+                <a href="formulario.html">Contáctame</a>
+                <a href="registro.html">Regístrate</a>
+            </nav>
+        </header>
+
+        <main class="contenido">
+            <form class="formulario" id="registroForm">
+                <h2>Registro</h2>
+
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" required />
+                <span class="error" id="error-nombre"></span>
+
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo" required>
+                <span class="error" id="error-correo"></span>
+
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required>
+                <span class="error" id="error-password"></span>
+
+                <label for="imagen">Imagen de perfil:</label>
+                <input type="file" id="imagen" name="imagen" accept="image/png, image/jpeg"
+                    onchange="mostrarImagen(event)">
+                <img id="ver-imagen" alt="Vista previa"
+                    style="display:none; margin-top:10px; max-width:100%; border-radius:12px; box-shadow: 0 0 10px rgba(0,0,0,0.2);">
+                <span class="error" id="error-imagen"></span>
+
+                <button type="submit" class="btn">Registrarse</button>
+            </form>
+        </main>
+        <footer class="footer">
+            <p>&copy; 2025 Diana Lorena Gil Vargas</p>
+        </footer>
+    </div>
+</body>
+
+</html>
